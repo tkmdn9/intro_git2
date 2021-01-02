@@ -6,3 +6,6 @@ Gitの練習をしていきます。
 .git rm
 .git status
 .git diff
+.git rm ファイル名（gitの管理とファイルごと削除）
+.git reset HEAD ファイル名（gitの管理とファイルごと削除したファイルを元に戻す）
+.git checkout ファイル名
