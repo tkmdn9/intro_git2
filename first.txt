@@ -9,3 +9,4 @@ Gitの練習をしていきます。
 .git rm ファイル名（gitの管理とファイルごと削除）
 .git reset HEAD ファイル名（gitの管理とファイルごと削除したファイルを元に戻す）
 .git checkout ファイル名
+.git rm --cached ファイル名（管理からだけ外す）
