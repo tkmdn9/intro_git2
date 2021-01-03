@@ -16,6 +16,9 @@ pyenv install --list
 pyenv install 3.9.0
 他のバージョンも入れることができる
 
+pyenv versionsでpythonのバージョンを確認する
+pyenv global 3.7.0でpythonのバージョンを変更することができる
+
 インストール失敗
 python-build: use openssl@1.1 from homebrew
 python-build: use readline from homebrew
