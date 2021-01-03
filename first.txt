@@ -10,6 +10,7 @@ Gitの練習をしていきます。
 .git reset HEAD ファイル名（gitの管理とファイルごと削除したファイルを元に戻す）
 .git checkout ファイル名
 .git rm --cached ファイル名（管理からだけ外す）
+.git push origin master
 
 【gitに登録したediterの確認方法】
 git config core.editor
@@ -17,16 +18,3 @@ git config core.editor
 git config --list
 【gitの設定ファイルを確認homeディレクトリ配下】
 cat ~/.gitconfig 
-
-
-
-【MACにPython環境設定】
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install pyenv
-echo $SHELL
-
-/bin/zbhの場合
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
-echo 'eval "$(pyenv init -)"' >> ~/.zshrc
-source ~/.zshrc

@@ -1,0 +1,43 @@
+
+【MACにPython環境設定】
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install pyenv
+echo $SHELL
+
+/bin/zbhの場合(https://github.com/seito-developer/Python-path/blob/main/README.md)
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+source ~/.zshrc
+
+【pythonインストール】
+pyenv install --list
+
+pyenv install 3.9.0
+他のバージョンも入れることができる
+
+インストール失敗
+python-build: use openssl@1.1 from homebrew
+python-build: use readline from homebrew
+Downloading Python-3.9.0.tar.xz...
+-> https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tar.xz
+Installing Python-3.9.0...
+python-build: use readline from homebrew
+python-build: use zlib from xcode sdk
+
+BUILD FAILED (OS X 11.1 using python-build 20180424)
+
+Inspect or clean up the working tree at /var/folders/41/klqm55g53wz_jwfd4spl7fhc0000gn/T/python-build.20210103193626.14448
+Results logged to /var/folders/41/klqm55g53wz_jwfd4spl7fhc0000gn/T/python-build.20210103193626.14448.log
+
+Last 10 log lines:
+  File "/private/var/folders/41/klqm55g53wz_jwfd4spl7fhc0000gn/T/python-build.20210103193626.14448/Python-3.9.0/Lib/ensurepip/__init__.py", line 210, in _main
+    return _bootstrap(
+  File "/private/var/folders/41/klqm55g53wz_jwfd4spl7fhc0000gn/T/python-build.20210103193626.14448/Python-3.9.0/Lib/ensurepip/__init__.py", line 129, in _bootstrap
+    return _run_pip(args + [p[0] for p in _PROJECTS], additional_paths)
+  File "/private/var/folders/41/klqm55g53wz_jwfd4spl7fhc0000gn/T/python-build.20210103193626.14448/Python-3.9.0/Lib/ensurepip/__init__.py", line 38, in _run_pip
+    return subprocess.run([sys.executable, "-c", code], check=True).returncode
+  File "/private/var/folders/41/klqm55g53wz_jwfd4spl7fhc0000gn/T/python-build.20210103193626.14448/Python-3.9.0/Lib/subprocess.py", line 524, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/private/var/folders/41/klqm55g53wz_jwfd4spl7fhc0000gn/T/python-build.20210103193626.14448/Python-3.9.0/python.exe', '-c', '\nimport runpy\nimport sys\nsys.path = [\'/var/folders/41/klqm55g53wz_jwfd4spl7fhc0000gn/T/tmpk32wn_va/setuptools-49.2.1-py3-none-any.whl\', \'/var/folders/41/klqm55g53wz_jwfd4spl7fhc0000gn/T/tmpk32wn_va/pip-20.2.3-py2.py3-none-any.whl\'] + sys.path\nsys.argv[1:] = [\'install\', \'--no-cache-dir\', \'--no-index\', \'--find-links\', \'/var/folders/41/klqm55g53wz_jwfd4spl7fhc0000gn/T/tmpk32wn_va\', \'--root\', \'/\', \'--upgrade\', \'setuptools\', \'pip\']\nrunpy.run_module("pip", run_name="__main__", alter_sys=True)\n']' returned non-zero exit status 1.
+make: *** [install] Error 1
